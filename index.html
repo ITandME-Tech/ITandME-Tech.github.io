@@ -757,46 +757,84 @@
     footer {
       background: var(--dark);
       border-top: 1px solid rgba(91, 107, 222, 0.15);
-      padding: 40px 48px;
+      padding: 60px 48px 30px;
     }
 
     .footer-inner {
       max-width: 1100px;
       margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
     }
 
-    .footer-inner img {
+    .footer-col img {
       height: 42px;
-      width: auto;
-      object-fit: contain;
+      margin-bottom: 16px;
+      opacity: 0.9;
     }
 
-    .footer-copy {
+    .footer-desc {
+      font-size: 14px;
+      color: #8090aa;
+      line-height: 1.6;
+      max-width: 260px;
+    }
+
+    .footer-col h4 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--blue-light);
+      margin-bottom: 12px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #c0c6dd;
+    }
+    
+    .footer-col ul li a {
+      text-decoration: none;
+      color: #c0c6dd;
+    }
+    
+    .footer-col ul li a:hover {
+      color: var(--blue-light);
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(91, 107, 222, 0.15);
+      margin-top: 40px;
+      padding-top: 20px;
+      text-align: center;
       font-size: 13px;
       color: #94a3b8;
-      line-height: 1.6;
     }
-
-    .footer-copy a {
+    
+    .footer-bottom a {
       color: var(--blue-light);
       text-decoration: none;
     }
-
-    .footer-copy a:hover,
-    .footer-copy a:focus {
+    
+    .footer-bottom a:hover {
       text-decoration: underline;
     }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      nav {
-        padding: 14px 24px;
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
       }
+    }
 
       .nav-links {
         display: none;
@@ -1216,14 +1254,59 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-inner">
+  <div class="footer-inner">
+
+    <!-- LEFT: BRAND -->
+    <div class="footer-col">
       <img src="images/logo.png" alt="ITandME Network Solutions logo" />
-      <p class="footer-copy">
-        © 2025 ITandME Network Solutions · Louisville, KY ·
-        <a href="tel:5025238973">(502) 523-8973</a> ·
-        <a href="mailto:Nathan@ITandME.Tech">Nathan@ITandME.Tech</a>
+      <p class="footer-desc">
+        ITandME delivers reliable, secure, and responsive IT solutions for Louisville businesses, including healthcare and regulated environments.
       </p>
     </div>
-  </footer>
+
+    <!-- SERVICES -->
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Managed IT</a></li>
+        <li><a href="#services">Cybersecurity</a></li>
+        <li><a href="#services">Network Engineering</a></li>
+        <li><a href="#medical">Medical IT / HIPAA</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:5025238973">(502) 523-8973</a></li>
+        <li><a href="mailto:Nathan@ITandME.Tech">Nathan@ITandME.Tech</a></li>
+        <li>Louisville, KY</li>
+        <li>24/7 Emergency Support</li>
+      </ul>
+    </div>
+
+    <!-- TRUST -->
+    <div class="footer-col">
+      <h4>Trust</h4>
+      <ul>
+        <li>HIPAA Compliant</li>
+        <li>HL7 / LIS Experience</li>
+        <li>Secure Remote Access</li>
+        <li>Local MSP</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    <p>
+      © 2025 ITandME Network Solutions · Louisville, KY ·
+      <a href="tel:5025238973">(502) 523-8973</a> ·
+      <a href="mailto:Nathan@ITandME.Tech">Nathan@ITandME.Tech</a>
+    </p>
+  </div>
+</footer>
 </body>
 </html>
